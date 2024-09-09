@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.static('public')); // Serve static files from the 'public' directory
 
 // Handle POST requests to the '/summarize' endpoint
-app.post('/summarize', (req, res) => {
+app.post('https://api-inference.huggingface.co/models/facebook/bart-large-cnn/summarize', (req, res) => {
  // get the text_to_summarize property from the request body
   const text = req.body.text_to_summarize;
 
